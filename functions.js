@@ -4,6 +4,9 @@
  * @return {string} the number as a string
  */
 
+ function numberToString(n) {
+  return n.toString();
+ }
 
 /**
  * Adds one to a given number.
@@ -11,6 +14,9 @@
  * @return {number}
  */
 
+function increase(n) {
+  return n + 1;
+}
 
 /**
  * Subtracts one from a given number.
@@ -18,6 +24,9 @@
  * @return {number}
  */
 
+function decrease(n) {
+  return n - 1;
+}
 
 /**
  * Adds two numbers.
@@ -26,6 +35,9 @@
  * @return {number} the sum
  */
 
+function add(x, y) {
+  return x + y;
+}
 
 /**
  * Subtracts the second number from the first.
@@ -34,6 +46,9 @@
  * @return {number} the difference
  */
 
+function subtract(x, y) {
+  return x - y;
+}
 
 /**
  * Multiplies two numbers.
@@ -42,6 +57,9 @@
  * @return {number} the product
  */
 
+function multiply(x,y) {
+  return x * y;
+}
 
 /**
  * Divides the first number by the second.
@@ -50,6 +68,9 @@
  * @return {number} the quotient
  */
 
+function divide(x, y) {
+  return x / y;
+}
 
 /**
  * Multiplies a number by itself.
@@ -57,6 +78,9 @@
  * @return {number} squared
  */
 
+function square(x) {
+  return x * x;
+}
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -67,6 +91,22 @@
  * @return {number} the result
  */
 
+//not working <-----
+function calculate(operation, x, y) {
+  if (operation === "add"){
+    console.log(x + " + " + y + " = " + (x + y));
+      return x + y;
+  }else if (operation === "subtract"){
+    console.log(x + " - " + y + " = " + (x-y));
+      return x - y;
+  }else if (operation === "multiply"){
+    console.log(x + " * " + y + " = " + (x * y));
+      return x * y;
+  }else if (operation === "divide"){
+    console.log(x + " / " + y + " = " + (x / y));
+      return x / y;
+  }
+}
 
 /**
  * Returns true if `a` is greater than `b`.
@@ -76,6 +116,10 @@
  */
 
 
+function isGreaterThan(x, y) {
+    return x > y;
+}
+
 /**
  * Returns true if `a` is less than `b`.
  * @param {number} a
@@ -84,6 +128,11 @@
  */
 
 
+
+function isLessThan(x, y) {
+    return x < y;
+}
+
 /**
  * Returns true if `a` and `b` are equal.
  * @param {number} a
@@ -91,6 +140,9 @@
  * @return {boolean} the numbers are equal
  */
 
+function areEqual(a, b) {
+  return a === b;
+}
 
 /**
  * Returns the smallest value of two numbers.
@@ -99,6 +151,9 @@
  * @return {number} the smallest number
  */
 
+function minimum (x, y) {
+  return Math.min(x, y);
+}
 
 /**
  * Returns the largest value of two numbers.
@@ -107,6 +162,9 @@
  * @return {number} the largest number
  */
 
+function maximum (x, y) {
+  return Math.max(x, y);
+}
 
 /**
  * Returns true if `n` is even.
@@ -114,6 +172,9 @@
  * @return {boolean} the number is even
  */
 
+function isEven (n) {
+  return (n%2 === 0);
+}
 
 /**
  * Returns true if `n` is odd.
@@ -121,6 +182,9 @@
  * @return {boolean} the number is odd
  */
 
+ function isOdd (n) {
+  return (n%2 !== 0); // -or- (n%2 === 0)
+ }
 
 /**
  * Returns a letter grade.
@@ -134,6 +198,22 @@
  * @return {string} the score represented as a letter grade
  */
 
+function letterGrade (score, maxScore) {
+  var total = score / maxScore;
+
+  if(total >= .90) {
+    return "A";
+  }else if(total >= .80) {
+    return "B";
+  }else if(total >= .70) {
+    return "C";
+  }else if(total >= .60) {
+    return "D";
+  }else if(total >= 0) {
+    return "F";
+    
+  }
+}
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -143,6 +223,15 @@
  * @return {object} restaurant
  */
 
+function incrementReviews(restaurant) {
+
+  if(restaurant.hasOwnProperty("reviews")) {
+    restaurant.reviews++;
+  }else{
+    restaurant.reviews = 1;
+  }
+  return restaurant;
+}
 
 /**
  * Joins two strings with a space.
@@ -150,6 +239,10 @@
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
+
+ function combine(word1, word2) {
+  return word1 + " " + word2;
+ }
 
 
 /**
@@ -160,3 +253,13 @@
  * @return {object} circle
  */
 
+function createCircle(radius) {
+  var circle = {};
+    circle.circumference = 2 * Math.PI * radius;
+    circle.area = Math.PI * (radius * radius);
+  return circle;
+}
+
+// var area = Math.PI * (radius + radius);
+// var circumference = 2 * (Math.PI * radius);
+//
